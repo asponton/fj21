@@ -1,0 +1,10 @@
+package br.com.caelum.hibernate;
+
+public class Produto {
+	
+	private Long id;
+	private String nome;
+	private String descricao;
+	private double preco;
+
+}

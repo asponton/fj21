@@ -1,0 +1,7 @@
+package br.com.caelum.agenda.filtro;
+
+import javax.servlet.Filter;
+
+public class FiltroConexao implements Filter{
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;AdicionaProduto.java&apos; to &apos;hibernate/src/br.com.caelum.hibernate&apos;&#x0A;- Original project: &apos;hibernate&apos;&#x0A;- Destination element: &apos;hibernate/src/br.com.caelum.hibernate&apos;&#x0A;- Original element: &apos;br.com.caelum.hibernate.AdicionaProduto.java&apos;" description="Copy compilation unit" destination="/src&lt;br.com.caelum.hibernate" element1="/src&lt;br.com.caelum.hibernate{AdicionaProduto.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1333065936369" units="1" version="1.0"/>
+</session>

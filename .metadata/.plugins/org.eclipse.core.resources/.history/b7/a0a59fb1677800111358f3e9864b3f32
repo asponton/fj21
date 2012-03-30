@@ -1,0 +1,44 @@
+package br.com.caelum.tarefas.controller;
+
+import javax.validation.Valid;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
+
+import br.com.caelum.tarefas.dao.TarefaDAO;
+import br.com.caelum.tarefas.modelo.Tarefa;
+
+@Controller
+public class TarefasController {
+	
+	@RequestMapping("novaTarefa")
+	public String form() {
+		return "tarefa/formulario";
+	}
+
+	@RequestMapping("adicionaTarefa")
+	public String adiciona(@Valid Tarefa tarefa, BindingResult resultado) {
+		
+		if (resultado.hasErrors()) {
+			return "tarefa/formulario";
+		}
+		
+		TarefaDAO tarefaDAO = new TarefaDAO();
+		tarefaDAO.adiciona(tarefa);
+		
+		return "tarefa/tarefaAdiciona-sucesso";
+	}
+	
+	@RequestMapping("listaTarefa")
+	public String lista() {
+		
+		TarefaDAO tarefaDAO = new TarefaDAO();
+		List<Tarefa> list = tarefaDAO.lista();
+		
+		return "tarefa/lista";
+	}
+
+}

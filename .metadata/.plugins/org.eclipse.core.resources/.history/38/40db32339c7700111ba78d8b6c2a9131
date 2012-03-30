@@ -1,0 +1,39 @@
+package br.com.caelum.agenda.filtro;
+
+import java.io.IOException;
+
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+
+public class FiltroTempoDeExecucao implements Filter{
+
+	public void destroy() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void doFilter(ServletRequest request, ServletResponse response,
+			FilterChain filterChain) throws IOException, ServletException {
+		
+		long tempoInicial = System.currentTimeMillis();
+		filterChain.doFilter(request, response);
+		long tempoFinal = System.currentTimeMillis();
+		
+		String uri = ((HttpServletRequest) request).getRequestURI();
+		System.out.println("");
+		
+		
+	}
+
+	public void init(FilterConfig arg0) throws ServletException {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

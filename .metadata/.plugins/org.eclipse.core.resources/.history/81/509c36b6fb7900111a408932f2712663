@@ -1,0 +1,18 @@
+package br.com.caelum.hibernate;
+
+public class AdicionaProduto {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		Produto p = new Produto();
+		p.setNome("Notebook Dell Inspiron");
+		p.setDescricao("Notebook de médio porte");
+		p.setPreco(1800.00);
+		
+		
+	}
+
+}
